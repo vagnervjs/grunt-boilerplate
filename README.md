@@ -11,7 +11,7 @@ A base to start and deploy your project usign Grunt: The JavaScript Task Runner
 - Clone Grunt Boilerplate
 
 ```bash
-$ git clone git@github.com:vagnervjs/grunt-boilerplate.git
+$ git clone https://github.com/vagnervjs/grunt-boilerplate.git
 ```
 
 - Enter in the folder
