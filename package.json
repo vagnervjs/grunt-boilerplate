@@ -1,0 +1,21 @@
+{
+  "name": "grunt-boilerplate",
+  "version": "0.0.1",
+  "description": "A base to start and deploy your project usign grunt",
+  "homepage": "http://vagnersantana.com/gruntbp",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/vagnervjs/grunt-boilerplate"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  },
+  "dependencies": {
+    "grunt-cli": "0.1.6",
+    "grunt": "~0.4.0",
+    "grunt-yui-compressor": "0.2.1",
+    "grunt-htmlcompressor": "~0.1.8",
+    "grunt-rsync": "~0.1.0"
+  }
+}
