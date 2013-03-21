@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 			},
 			deploy: {
 				src: './dist/',
-				dest: '/var/www/grunt',
+				dest: '/var/www',
 				host: 'root@vagnersantana.com',
 				recursive: true,
 				syncDest: true
@@ -38,9 +38,6 @@ module.exports = function(grunt) {
 
 	for(var i = 1, l = keys.length; i < l; i++) {
 		tasks.push(keys[i]);
-		if(i === l-1) {
-			console.log('CHEGOU !!!');
-		}
 	}
 
 	grunt.loadNpmTasks('grunt-yui-compressor');
