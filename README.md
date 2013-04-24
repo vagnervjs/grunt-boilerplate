@@ -20,7 +20,7 @@ $ git clone https://github.com/vagnervjs/grunt-boilerplate.git
 $ cd grunt-boilerplate
 ```
 
-- Instal dependences
+- Install dependences
 
 ```bash
 $ sudo npm install
