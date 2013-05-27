@@ -25,9 +25,9 @@ $ cd grunt-boilerplate
 ```bash
 $ sudo npm install
 ```
-- Change packge.json file add your project info
+- Change packge.json file adding your project info
 
-- Change the deploy remote host
+- Change the deploy remote host (if you want to deploy)
 
 ```bash
 deploylive: {
