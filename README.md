@@ -47,6 +47,10 @@ deploylive: {
 $ sudo grunt
 ```
 
+## License
+
+- Code is under [MIT license](http://vagnersantana.mit-license.org)  © Vagner Santana
+
 
 
 
