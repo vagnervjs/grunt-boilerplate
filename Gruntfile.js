@@ -8,25 +8,33 @@ module.exports = function(grunt) {
 				dest: 'src/assets/js/all.min.js'
 			}
 		},
-		less: {
-            development: {
-                options: {
-                    yuicompress: true
-                },
-                files: {
-                    "./src/assets/css/all.min.css":
-                    ["./src/assets/css/less/main.less"]
-                }
+        cssmin: {
+            dist: {
+                src: ['src/assets/css/main.css'],
+                dest: 'src/assets/css/all.min.css'
             }
         },
+        // uncomment for use less and comment cssmin configs
+		// less: {
+        //     development: {
+        //         options: {
+        //             yuicompress: true
+        //         },
+        //         files: {
+        //             "./src/assets/css/all.min.css":
+        //             ["./src/assets/css/less/main.less"]
+        //         }
+        //     }
+        // },
 		rsync: {
 			dist: {
 				src: './src/',
 				dest: './dist',
 				recursive: true,
 				syncDest: true,
-				exclude: ['main.*']
+				exclude: ['main.*', 'less']
 			},
+            // uncomment and config
 			// deploy: {
 			// 	src: './dist/',
 			// 	dest: '/var/www',
@@ -47,6 +55,7 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-yui-compressor');
 	grunt.loadNpmTasks('grunt-rsync');
-	grunt.loadNpmTasks('grunt-contrib-less');
+    // uncomment for use less
+	// grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.registerTask('default', tasks);
 };
