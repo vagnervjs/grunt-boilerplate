@@ -8,12 +8,17 @@ module.exports = function(grunt) {
 				dest: 'src/assets/js/all.min.js'
 			}
 		},
-		cssmin: {
-			dist: {
-				src: ['src/assets/css/main.css'],
-				dest: 'src/assets/css/all.min.css'
-			}
-		},
+		less: {
+            development: {
+                options: {
+                    yuicompress: true
+                },
+                files: {
+                    "./src/assets/css/all.min.css":
+                    ["./src/assets/css/less/main.less"]
+                }
+            }
+        },
 		rsync: {
 			dist: {
 				src: './src/',
@@ -22,13 +27,13 @@ module.exports = function(grunt) {
 				syncDest: true,
 				exclude: ['main.*']
 			},
-			deploy: {
-				src: './dist/',
-				dest: '/var/www',
-				host: 'root@vagnersantana.com',
-				recursive: true,
-				syncDest: true
-			}
+			// deploy: {
+			// 	src: './dist/',
+			// 	dest: '/var/www',
+			// 	host: 'root@vagnersantana.com',
+			// 	recursive: true,
+			// 	syncDest: true
+			// }
 		}
 	};
 	grunt.initConfig(gruntConfig);
@@ -42,5 +47,6 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-yui-compressor');
 	grunt.loadNpmTasks('grunt-rsync');
+	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.registerTask('default', tasks);
 };
