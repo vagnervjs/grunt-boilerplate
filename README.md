@@ -29,13 +29,15 @@ $ sudo npm install
 
 - Change the deploy remote host (if you want to deploy)
 
-		deploylive: {
-			src: './dist/',
-			dest: '/var/www/yourproject',
-			host: 'root@yourhost',
-			recursive: true,
-			syncDest: true
-		}
+```bash
+deploylive: {
+	src: './dist/',
+	dest: '/var/www/yourproject',
+	host: 'root@yourhost',
+	recursive: true,
+	syncDest: true	
+}
+```
 
 - Customize and add grunt tasks for your needs
 
