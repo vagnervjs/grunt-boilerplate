@@ -16,6 +16,7 @@
     "grunt": "~0.4.1",
     "grunt-yui-compressor": "0.3.0",
     "grunt-htmlcompressor": "~0.1.8",
+    "grunt-imageoptim": "~1.4.1",
     "grunt-rsync": "~0.1.1",
     "grunt-contrib-less": "~0.6.3"
   }
